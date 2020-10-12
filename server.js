@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const ShortUrl = require('./models/shortUrl')
-const port = 3000
+const port = process.env.PORT || 9000;
 const mongoURI = 'mongodb+srv://admin:admin@cluster0.m11dw.mongodb.net/<dbname>?retryWrites=true&w=majority'
 
 mongoose.connect(mongoURI, {
